@@ -59,8 +59,9 @@ async function getPost(id: string): Promise<Post | null> {
   }
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const post = await getPost(params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const post = await getPost(id);
   if (!post) {
     return {
       title: 'Post Not Found',
@@ -73,8 +74,9 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 
-export default async function PostPage({ params }: { params: { id: string } }) {
-  const post = await getPost(params.id);
+export default async function PostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const post = await getPost(id);
 
   if (!post) {
     // This will render the not-found.tsx page if you have one, or a default 404.

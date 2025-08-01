@@ -104,7 +104,7 @@ export const HomePageUI = ({ posts }: { posts: Post[] }) => {
       <section>
         <div className="flex justify-between items-center mb-8">
           <h3 className="text-2xl font-bold text-zinc-900">Recent Posts</h3>
-          <Link href="#" className="text-sm font-semibold text-zinc-800 hover:text-red-500 transition-colors flex items-center space-x-2">
+          <Link href="#" className="bg-black text-white px-4 py-2 rounded-full font-semibold hover:bg-gray-800 transition-colors flex items-center space-x-2 text-sm">
             <span>All Posts</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
           </Link>

@@ -13,8 +13,11 @@ const Header = () => {
           <Link href="#" className="text-black hover:text-gray-600 transition-colors">About Us</Link>
           <Link href="#" className="text-black hover:text-gray-600 transition-colors">Contact Us</Link>
         </nav>
-        <button className="bg-black text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transition-colors">
-          Subscribe
+        <button className="border-black  text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+          Demo
+        </button>
+        <button className="bg-black  text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+          Get Started
         </button>
       </div>
     </header>

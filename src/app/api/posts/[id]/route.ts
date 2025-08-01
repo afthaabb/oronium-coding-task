@@ -4,10 +4,10 @@ const MOCK_API_URL = 'https://688c7791cd9d22dda5cd3e9e.mockapi.io/api/v1/posts';
 
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const id = params.id;
+    const { id } = await params;
     // Fetch a single post by its ID from the mock API
     const res = await fetch(`${MOCK_API_URL}/${id}`);
 
